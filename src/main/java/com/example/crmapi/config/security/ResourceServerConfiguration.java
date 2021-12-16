@@ -9,7 +9,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 @Configuration
 @EnableResourceServer
 public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
-    private static final String RESOURCE_ID = "crm-rest-api";
+    private static final String RESOURCE_ID = "smart-school-api";
 
     private static final String[] AUTH_WHITELIST = {
             // -- swagger ui urls

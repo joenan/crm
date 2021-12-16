@@ -67,10 +67,6 @@ public class UserController {
 
     @PostMapping("/authenticateAndGetUserRoles")
     public ResponseEntity authenticateUser(@RequestBody LoginRequestDto loginRequest) {
-
-
-
-//        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword());
         try {
             Authentication authentication = this.authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
             SecurityContextHolder.getContext().setAuthentication(authentication);
